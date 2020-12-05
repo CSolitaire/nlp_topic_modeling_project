@@ -31,8 +31,8 @@ Mathematically, the above two assumptions can be represented as:
 
 The Gensim library is an extremely useful NLP library for Python. Gensim was primarily developed for topic modeling. However, it now supports a variety of other NLP tasks such as converting words to vectors (word2vec), document to vectors (doc2vec), finding text similarity, and text summarization. I will be using the Gensim library to remove stop words in my corpus, due to its optimization for topic modeling.  
 
-For more information to Topic Modeling please see [Link to Topic Modeling](https://stackabuse.com/python-for-nlp-topic-modeling/)
-For more information on the Ginsim Library please see [Link to Ginsim Library](https://stackabuse.com/python-for-nlp-working-with-the-gensim-library-part-1/)   
+For more information to Topic Modeling please see [Link to Topic Modeling](https://stackabuse.com/python-for-nlp-topic-modeling/)   
+For more information on the Ginsim Library please see [Link to Ginsim Library](https://stackabuse.com/python-for-nlp-working-with-the-gensim-library-part-1/)      
 
 
 ## Deliverables
