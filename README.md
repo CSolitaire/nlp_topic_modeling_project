@@ -3,7 +3,7 @@ Corey Solitaire
 12.7.2020
 
 ## About the Project
-Scraped 1800 of the most recently updated GitHub README pages associated with the dicpiline of Geology to examine current trends in the field.  Using topic modeling 5 trends were identifed in the repositories (list trends).  Trend associateion became clearer when common words were removed.  Using identified trend clusters dictornays of trending words were crated and scored providing a ranked list of trends for the field.  
+This project scrapped data from 1800 of the most recently updated GitHub README pages associated with the dicpiline of Geology to examine current trends in the field.  Using topic modeling 5 trends were identifed in the repositories (list trends).  Trend association became clearer when common words were removed.  Using identified trend clusters dictornays of trending words were crated and scored providing a ranked list of trends for the field.  TFIDF Corpus
 
 ## Goals
 To identify common trends in GitHub repository users who focus on Geological research
@@ -48,20 +48,24 @@ For more information on the Ginsim Library please see [Link to Ginsim Library](h
 
 ## Data Dictionary
   ---                  ---
-| **Terms**           | **Definition**                                                                          |
-| ---                 | ---                                                                                     |
-| document            | A single observation, like the body of an email                                         |
-| corpus              | Set of documents, dataset, sample, etc                                                  |
-| tokenize            | Breaking text up into linguistic units such as words or n-grams                         |
-| lemmatize           | Return the base or dictionary form of a word, which is the lemma                        |
-| stopwords           | Commonly used word (such as “the”, “a”, “an”, “in”) that are ignored                    |
-| Beautiful Soup      | A Python library for pulling data out of HTML and XML files                             |
-| web scraper         | A data science technique used for extracting data from websites                         |
-| programing language | A set of commands that a computer understands                                           |
-| TF                  | Term Frequency; how often a word appears in a document                                  |
-| IDF                 | Inverse Document Frequency; a measure based on in how many documents will a word appear |
-| TF-IDF              | A holistic combination of TF and IDF                                                    |
+| **Terms**           | **Definition**                                                                                                                     |
+| ---                 | ---                                                                                                                                |
+| document            | A single observation, like the body of an email                                                                                    |
+| corpus              | Set of documents, dataset, sample, etc                                                                                             |
+| tokenize            | Breaking text up into linguistic units such as words or n-grams                                                                    |
+| lemmatize           | Return the base or dictionary form of a word, which is the lemma                                                                   |
+| stopwords           | Commonly used word (such as “the”, “a”, “an”, “in”) that are ignored                                                               |
+| Beautiful Soup      | A Python library for pulling data out of HTML and XML files                                                                        |
+| web scraper         | A data science technique used for extracting data from websites                                                                    |
+| programing language | A set of commands that a computer understands                                                                                      |
+| TF                  | Term Frequency; how often a word appears in a document                                                                             |
+| IDF                 | Inverse Document Frequency; a measure based on in how many documents will a word appear                                            |
+| TF-IDF              | A holistic combination of TF and IDF                                                                                               |
+| Topic Modeling.     | An unsupervided machine learning technique to analyze large volumes of text data by clustering into groups                         |
+| LDA                 | A modeling technique where documents are described by a distribution of topics, and topic are described by a distribution of words |
+| NLP                 | Natural language processing is defined as the automatic manipulation of natural language, like speech and text, by software        |
   ---                  ---  
+  
 ## Initial Thoughts & Hypotheses
 ## Thoughts
 ## Hypotheses
