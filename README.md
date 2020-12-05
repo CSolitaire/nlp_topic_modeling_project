@@ -1,6 +1,6 @@
 # Identifyng Current Trends in Geologic Resarch via Topic Modeling
-Corey Solitaire
-12.7.2020
+Corey Solitaire   
+12.7.2020   
 
 ## About the Project
 This project scrapped data from 1800 of the most recently updated GitHub README pages associated with the dicpiline of Geology to examine current trends in the field.  Using topic modeling 5 trends were identifed in the repositories (list trends).  Trend association became clearer when common words were removed.  Using identified trend clusters dictornays of trending words were crated and scored providing a ranked list of trends for the field.  TFIDF Corpus
