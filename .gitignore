@@ -13,6 +13,7 @@ Thumbs.db
 *.json.crc
 *._SUCCESS.crc
 *_SUCCESS 
+__pycache__
 ################################################### Complete List ###################################################
 .ipynb_checkpoints
 # Created by .ignore support plugin (hsz.mobi)
