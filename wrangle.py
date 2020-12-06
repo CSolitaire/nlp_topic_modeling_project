@@ -201,8 +201,8 @@ def prep_data(df, column):
     df['doc_length'] = [len(wordlist) for wordlist in df.words]
     
     # Adds column with bigrams and trigrams
-    df['bigrams'] =  df['text_filtered'].apply(lambda row: list(nltk.bigrams(row.split(' '))))
-    df['trigrams'] =  df['text_filtered'].apply(lambda row: list(nltk.trigrams(row.split(' '))))
+    df['bigrams'] =  df['content_clean'].apply(lambda row: list(nltk.bigrams(row.split(' '))))
+    df['trigrams'] =  df['content_clean'].apply(lambda row: list(nltk.trigrams(row.split(' '))))
     
     # removing non-english languages 
     # language_list = ['JavaScript', 'R', 'Jupyter Notebook','Python','TypeScript']
