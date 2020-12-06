@@ -102,7 +102,9 @@ def proportion_visualization(word_counts):
     .plot.barh(stacked=True))
 
     plt.legend(bbox_to_anchor=(1.05, 1))
-    plt.title('Proportion of Topics for the 20 most common words')
+    plt.xlabel('Percent Observed')
+    plt.ylabel('Words')
+    plt.title('Proportion of topics for the 20 most common words')
     plt.show()
 
 def create_wordcloud(t0_words, t1_words, t2_words, t3_words, t4_words):
