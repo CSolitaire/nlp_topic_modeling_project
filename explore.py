@@ -6,14 +6,6 @@ import pandas as pd
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-def set_plotting_defaults():
-    '''
-    sets default sizes for plots
-    '''
-    # plotting defaults
-    plt.rc('figure', figsize=(18, 10))
-    plt.style.use('seaborn-whitegrid')
-    plt.rc('font', size=16)
 
 def nlp_topic_modeling(df, max_df, min_df, n_components):
     '''
@@ -50,6 +42,68 @@ def create_lang_word_list(df):
     t4_words = re.sub(r'\s.\s', '', t4_words)
     return t0_words,t1_words,t2_words,t3_words,t4_words
 
+def get_count_word_freq(t0_words,t1_words,t2_words,t3_words,t4_words):
+    '''
+    split the list of words and get frequency count
+    '''
+    # get the count of words by category
+    t0_freq = pd.Series(t0_words.split()).value_counts()
+    t1_freq = pd.Series(t1_words.split()).value_counts()
+    t2_freq = pd.Series(t2_words.split()).value_counts()
+    t3_freq = pd.Series(t3_words.split()).value_counts()
+    t4_freq = pd.Series(t4_words.split()).value_counts()
+    return t0_freq, t1_freq, t2_freq, t3_freq, t4_freq
+
+def create_df_word_counts(t0_freq, t1_freq, t2_freq, t3_freq, t4_freq):
+    '''
+    combines the frequencies to create new dataframe, word_counts
+    '''
+    # combine list of word counts into df for further exploration
+    word_counts = (pd.concat([t0_freq, t1_freq, t2_freq, t3_freq, t4_freq], axis=1, sort=True)
+                .set_axis(['t0', 't1', 't2', 't3', 't4'], axis=1, inplace=False)
+                .fillna(0)
+                .apply(lambda s: s.astype(int))
+                )
+    # create a column of all words as well
+    word_counts['all_words'] = word_counts['t0'] + word_counts['t1'] + word_counts['t2'] + word_counts['t3'] + word_counts['t4']
+    return word_counts
+
+
+def word_counts_proportion(word_counts):
+    '''
+    compute proportion of each string that for each language
+    '''
+    # add columns for each langauge proportion
+    word_counts['prop_t0'] = word_counts['t0']/word_counts['all_words']
+    word_counts['prop_t1'] = word_counts['t1']/word_counts['all_words']
+    word_counts['prop_t2'] = word_counts['t2']/word_counts['all_words']
+    word_counts['prop_t3'] = word_counts['t3']/word_counts['all_words']
+    word_counts['prop_t4'] = word_counts['t4']/word_counts['all_words']
+    return word_counts
+
+
+def proportion_visualization(word_counts):
+    '''
+    creates a plot that shows the proportion of the top 20 words by language
+    '''
+    ## visualize the % of the term in each language
+    plt.figure(figsize=(12,8))
+    (word_counts
+    .assign(p_t0=word_counts.t0 / word_counts['all_words'],
+            p_t1=word_counts.t1 / word_counts['all_words'],
+            p_t2=word_counts.t2 / word_counts['all_words'],
+            p_t3=word_counts.t3 / word_counts['all_words'],
+            p_t4=word_counts.t4 / word_counts['all_words']
+            )
+    .sort_values(by='all_words')
+    [['p_t0', 'p_t1', 'p_t2', 'p_t3', 'p_t4']]
+    .tail(20)
+    .sort_values('p_t0')
+    .plot.barh(stacked=True))
+
+    plt.legend(bbox_to_anchor=(1.05, 1))
+    plt.title('Proportion of Topics for the 20 most common words')
+    plt.show()
 
 def create_wordcloud(t0_words, t1_words, t2_words, t3_words, t4_words):
     '''
@@ -67,6 +121,15 @@ def plot_wordcloud(df):
     '''
     creates subplots of bigrams for each category
     '''
+    def set_plotting_defaults():
+        '''
+        sets default sizes for plots
+        '''
+        # plotting defaults
+        plt.rc('figure', figsize=(18, 10))
+        plt.style.use('seaborn-whitegrid')
+        plt.rc('font', size=16)
+
     set_plotting_defaults()
     t0_words, t1_words, t2_words, t3_words, t4_words = create_lang_word_list(df)
     t0_word_cloud, t1_word_cloud, t2_word_cloud, t3_word_cloud, t4_word_cloud  = create_wordcloud(t0_words, t1_words, t2_words, t3_words, t4_words)
