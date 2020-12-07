@@ -8,7 +8,7 @@ Corey Solitaire
 This project utilized web scraping and topic modeling to identify current trends in geologic research. A function was developed that takes in a list of GitHub URL addresses and collects README text data and the repository's primary programming language. Topic modeling was performed using the LatentDirichletAllocation (LDA) class from the sklearn.decomposition library. Five trends were identified in the corpus over the course of two rounds of modeling, with trend association becoming clearer when common words were removed. 
 
 ## Goals
-To identify common trends in GitHub repository users who focus on Geological research
+Identify common trends in GitHub repository users who focus on geological research
 
 ## Background
 
