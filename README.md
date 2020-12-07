@@ -2,7 +2,7 @@
 Corey Solitaire   
 12.7.2020   
 
-![](https://www.google.com/url?sa=i&url=http%3A%2F%2Fgloucester-ma.gov%2F718%2FGeology&psig=AOvVaw3AsCrUNVKzo5dhHHPSZBZd&ust=1607391340781000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPizj8Hduu0CFQAAAAAdAAAAABAG)
+![](https://gloucester-ma.gov/ImageRepository/Document?documentID=6277)
 
 ## About the Project
 This project utilized web scraping and topic modeling to identify current trends in geologic research. A function was developed that takes in a list of GitHub URL addresses and collects README text data and the repository's primary programming language. Topic modeling was performed using the LatentDirichletAllocation (LDA) class from the sklearn.decomposition library. Five trends were identified in the corpus over the course of two rounds of modeling, with trend association becoming clearer when common words were removed. 
