@@ -103,34 +103,34 @@ Topic 4: Geochemistry
 
 ***How did the project go? Did you meet your goal? Why or why not?***
 
-    This project ended differently than I thought it would. My goal was to see if it was possible to use NLP to discover topics inside a text body. However, I did not know that this was a sub-field of NLP known as topic modeling. After speaking to Ryan and doing a lot of research, I used a topic modeling library (LDA) to assist me with my goal. If I had known that this project would use a specific machine learning library to map the text into topics, I would have picked a cleaner data source (blog posts/research journals). I was bogged down in cleaning my corpus (removed 800 common words by hand), but I learned a lot about topic modeling in the process.
+This project ended differently than I thought it would. My goal was to see if it was possible to use NLP to discover topics inside a text body. However, I did not know that this was a sub-field of NLP known as topic modeling. After speaking to Ryan and doing a lot of research, I used a topic modeling library (LDA) to assist me with my goal. If I had known that this project would use a specific machine learning library to map the text into topics, I would have picked a cleaner data source (blog posts/research journals). I was bogged down in cleaning my corpus (removed 800 common words by hand), but I learned a lot about topic modeling in the process.
 
 ***What are your next steps?***
 
-    The next steps are to scrape more README's and incorporate the repository title as a second corpus. I want to perform LDA on the main body of text and the titles to see to test how well I did at cleaning the data and implementing the machine learning library.
+The next steps are to scrape more README's and incorporate the repository title as a second corpus. I want to perform LDA on the main body of text and the titles to see to test how well I did at cleaning the data and implementing the machine learning library.
 
 ***For each stage of the pipeline, where could you make improvements?***
 
 *Planning*
 
-    I knew I wanted to keep working on an NPL project that I had started. It was easy to transition that exploration into this project.
+I knew I wanted to keep working on an NPL project that I had started. It was easy to transition that exploration into this project.
 
 *Acquire*
 
-    I misdiagnosed an error in my acquire function that caused me many problems throughout this project. Initially, the function was designed to scrape repositories on the first 500 search pages, but instead it only scrapped the first search page 500 times. This setback cost me a lot of time. Wen I could make the fix a large enough corpus was returned to perform this project.
+I misdiagnosed an error in my acquire function that caused me many problems throughout this project. Initially, the function was designed to scrape repositories on the first 500 search pages, but instead it only scrapped the first search page 500 times. This setback cost me a lot of time. Wen I could make the fix a large enough corpus was returned to perform this project.
 
 *Prepare*
 
-    I struggled to get my function to remove stop words correctly. Finally, I installed the Gensim library to handle all of my stop words (you can apply Gensim to a body of text and not think about it) and created a function that looped through my list 0f 800 custom stop words that were used in the second round of modeling.
+I struggled to get my function to remove stop words correctly. Finally, I installed the Gensim library to handle all of my stop words (you can apply Gensim to a body of text and not think about it) and created a function that looped through my list 0f 800 custom stop words that were used in the second round of modeling.
 
 *Explore*
 
-    In explore, I needed a function that would provide me with common words for my corpus so they could be removed. Most of my time in explore was spent identifying common words that needed to be removed before topic modeling would be effective.
+In explore, I needed a function that would provide me with common words for my corpus so they could be removed. Most of my time in explore was spent identifying common words that needed to be removed before topic modeling would be effective.
 
 *Model*
 
-    Topic modeling and exploration were combined on this project. The first round of topic modeling produced muddy results and needed lots of time to explore identifying and removing common words before the second round of modeling providing generally identifiable topics.
+Topic modeling and exploration were combined on this project. The first round of topic modeling produced muddy results and needed lots of time to explore identifying and removing common words before the second round of modeling providing generally identifiable topics.
 
 *Delivery*
 
-    Delivery is the part of the pipeline that I am most comfortable with. I want to make sure that I have lots of time to prepare for delivery and lots of time to read up on Topic Modeling. Since it is an NLP technique that we did not learn in class, I want to make sure that I can explain how it works and why I chose to work with it before I present my findings.
+Delivery is the part of the pipeline that I am most comfortable with. I want to make sure that I have lots of time to prepare for delivery and lots of time to read up on Topic Modeling. Since it is an NLP technique that we did not learn in class, I want to make sure that I can explain how it works and why I chose to work with it before I present my findings.
