@@ -87,11 +87,11 @@ Functions were used to modify the text.  The text's case was reduced to lowercas
 
 ***Topic modeling Round 1: Corpus with only stop words removed***
 
-    In the first round of modeling, topics were hard to observe due to the large volume of common words shared between the documents. One Spanish language library (TypeScript) was removed from the corpus along with ~800 common words. These words were identified using domain knowledge and included common expressions and words associated with technological terms (git, website, module, etc.)
+In the first round of modeling, topics were hard to observe due to the large volume of common words shared between the documents. One Spanish language library (TypeScript) was removed from the corpus along with ~800 common words. These words were identified using domain knowledge and included common expressions and words associated with technological terms (git, website, module, etc.)
 
 ***Topic modeling Round 2: Corpus with extra stop words removed***
 
-    The second round of the model was more successful than the previous and was terminated when the list of the 20 most common words was content-related, and individual word frequencies were topic-specific. This second round of modeling produced five topics that could be generally described as follows:
+The second round of the model was more successful than the previous and was terminated when the list of the 20 most common words was content-related, and individual word frequencies were topic-specific. This second round of modeling produced five topics that could be generally described as follows:
 
 Topic 0: Seismology
 Topic 1: Structural Geology
