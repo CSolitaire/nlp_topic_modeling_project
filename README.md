@@ -1,4 +1,4 @@
-# Identifyng Current Trends in Geologic Resarch via Topic Modeling
+# Identifyng Current Trends in Geologic Resarch Using Topic Modeling
 Corey Solitaire   
 12.7.2020   
 
