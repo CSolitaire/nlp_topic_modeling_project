@@ -93,11 +93,11 @@ In the first round of modeling, topics were hard to observe due to the large vol
 
 The second round of the model was more successful than the previous and was terminated when the list of the 20 most common words was content-related, and individual word frequencies were topic-specific. This second round of modeling produced five topics that could be generally described as follows:
 
-Topic 0: Seismology
-Topic 1: Structural Geology
-Topic 2: Economic Geology
-Topic 3: Geomorphology
-Topic 4: Geochemistry 
+*Topic 0: Seismology*   
+*Topic 1: Structural Geology*   
+*Topic 2: Economic Geology*   
+*Topic 3: Geomorphology*   
+*Topic 4: Geochemistry*    
 
 ## Reflections:
 
